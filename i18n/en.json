@@ -1,3 +1,4 @@
 {
-	"addtocalendar-desc": "Extension for adding 'Add to Calendar' link capabilities to MediaWiki."
+	"addtocalendar-desc": "Extension for adding 'Add to Calendar' link capabilities to MediaWiki.",
+	"addtocalendar-linktext": "Add to Calendar"
 }
