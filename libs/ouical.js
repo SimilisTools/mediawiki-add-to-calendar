@@ -2,6 +2,8 @@
   var MS_IN_MINUTES = 60 * 1000;
 
   var formatTime = function(date) {
+  	// TODO: Problem with toISOstring
+  	// TODO: Problem with + -> +00:00
     return date.toISOString().replace(/-|:|\.\d+/g, '');
   };
 
@@ -170,3 +172,30 @@
                           getOrGenerateCalendarId(params));
   };
 })(this);
+
+
+// Adding toISOstring https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
+if ( !Date.prototype.toISOString ) {
+  ( function() {
+
+    function pad(number) {
+      if ( number < 10 ) {
+        return '0' + number;
+      }
+      return number;
+    }
+
+    Date.prototype.toISOString = function() {
+      return this.getUTCFullYear() +
+        '-' + pad( this.getUTCMonth() + 1 ) +
+        '-' + pad( this.getUTCDate() ) +
+        'T' + pad( this.getUTCHours() ) +
+        ':' + pad( this.getUTCMinutes() ) +
+        ':' + pad( this.getUTCSeconds() ) +
+        '.' + (this.getUTCMilliseconds() / 1000).toFixed(3).slice( 2, 5 ) +
+        'Z';
+    };
+
+  }() );
+}
+

@@ -3,6 +3,8 @@
 $(document).ready( function() {
 	var mandatory = ["title", "start", "end"]; //Mandatory elems
 	
+	// TODO: Get server timezone maybe?
+	
 	$(".addtocalendar").each( function( i ) {
 		
 		var eventData = $(this).data();
