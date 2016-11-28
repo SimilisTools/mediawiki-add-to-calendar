@@ -4,8 +4,7 @@
 	"description": "",
 	"keywords": [
 		"MediaWiki",
-		"Colorbox",
-		"popup"
+		"Calendar"
 	],
 	"homepage": "https://github.com/SimilisTools/mediawiki-addToCalendar",
 	"license": "GPLv3",

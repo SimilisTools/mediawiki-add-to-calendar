@@ -8,7 +8,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $GLOBALS['wgExtensionCredits']['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'AddToCalendar',
-	'version' => '0.1',
+	'version' => '0.1.0',
 	'url' => 'https://github.com/SimilisTools/mediawiki-addToCalendar',
 	'author' => array( 'Toniher' ),
 	'descriptionmsg' => 'addtocalendar-desc',
